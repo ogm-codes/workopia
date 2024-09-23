@@ -1,9 +1,9 @@
 
 <?php 
-require base_path('views/partials/head.php');
-require base_path('views/partials/navbar.php');
-require base_path('views/partials/showcase-search.php');
-require base_path('views/partials/top-banner.php'); 
+ loadPartial('head');
+ loadPartial('navbar');
+ loadPartial('showcase-search');
+ loadPartial('top-banner'); 
 ?>
 
     <!-- Job Listings -->
@@ -190,12 +190,12 @@ require base_path('views/partials/top-banner.php');
             </div>
           </div>
         </div>
-        <a href="listings.html" class="block text-xl text-center">
+        <a href="/listings" class="block text-xl text-center">
           <i class="fa fa-arrow-alt-circle-right"></i>
           Show All Jobs
         </a>
       </section>
 
       
-<?php require base_path('views/partials/bottom-banner.php') ?>
- <?php require base_path('views/partials/footer.php') ?>
+<?php loadPartial('bottom-banner') ?>
+<?php loadPartial('footer') ?>
