@@ -1,6 +1,10 @@
 <?php
 
 require '../helpers.php';
+require base_path('Database.php');
+$config = require base_path('config/db.php');
+
+$db = new Database($config);
 //loadView('home');
 
 //Setup for Routing
