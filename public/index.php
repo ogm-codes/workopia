@@ -9,9 +9,8 @@ $db = new Database($config);
 
 //Setup for Routing
 $uri = $_SERVER['REQUEST_URI'];
+$method = $_SERVER['REQUEST_METHOD'];
 
 //inspectAndDie($uri);
-require base_path('router.php');
-
-
+require base_path('Router.php');
 
