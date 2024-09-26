@@ -4,7 +4,7 @@ class Router {
     protected $routes = [];
 
     public function registerRoute($method, $uri, $controller) {
-        $this->routes = [
+        $this->routes[] = [
             'method' => $method,
             'uri' => $uri,
             'controller' => $controller
@@ -63,8 +63,20 @@ class Router {
      * @param mixed $controller
      * @return void
      */
-    public function delete($uri, $controller) {
+   /* public function delete($uri, $controller) {
         $this->registerRoute('DELETE', $uri, $controller);
+    } */
+
+    /**
+     * Load error page
+     * 
+     * @param int $httpCode
+     * @return void
+     */
+    public function error($httpCode = 404){
+        http_response_code($httpCode);
+        loadView('error/404');
+        exit;
     }
 
      /**
@@ -81,9 +93,6 @@ class Router {
                 return;
             }
         }
-
-        http_response_code(404);
-        loadView('error/404');
-        exit;
+        $this->error();
     }
 }

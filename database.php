@@ -25,4 +25,21 @@ class Database {
                 
         }
     }
+
+    /**
+     * Query the database
+     * 
+     * @param string $query
+     * @return PDOStatement
+     * @throws PDOException
+     */
+    public function query($query) {
+        try {
+            $sth = $this->conn->prepare($query);
+            $sth->execute();
+            return $sth;
+        } catch (PDOException $e) {
+            throw new Exception("Query failed to execute: {$e->getMessage()}");
+        }
+    }
 }

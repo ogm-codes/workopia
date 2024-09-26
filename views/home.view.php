@@ -4,6 +4,8 @@
  loadPartial('navbar');
  loadPartial('showcase-search');
  loadPartial('top-banner'); 
+
+ //inspect($listings);
 ?>
 
     <!-- Job Listings -->
