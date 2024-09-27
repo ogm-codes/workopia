@@ -1,0 +1,15 @@
+{
+    "name": "itlnr13Oratile/workopia",
+    "description": "Job Listing website",
+    "authors": [
+        {
+            "name": "Oratile Mogorosi"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\" : "/"
+        }
+    }
+}

@@ -1,8 +1,15 @@
 <?php
 
 require '../helpers.php';
-require base_path('Router.php');
-require base_path('Database.php');
+//require base_path('Framework/Router.php');
+//require base_path('Framework/Database.php');
+
+spl_autoload_register(function ($class) {
+    $path = base_path('Framework/' . $class . '.php');
+    if (file_exists($path)) {
+        require $path;
+    }
+});
 
 $config = require base_path('config/db.php');
 
