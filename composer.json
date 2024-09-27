@@ -1,9 +1,9 @@
 {
-    "name": "itlnr13Oratile/workopia",
+    "name": "desktop/workopia",
     "description": "Job Listing website",
     "authors": [
         {
-            "name": "Oratile Mogorosi"
+            "name": "workopia/desktop"
         }
     ],
     "autoload": {
