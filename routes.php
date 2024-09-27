@@ -1,5 +1,6 @@
 <?php
 
+//$router->get('/', 'HomeController@index');
 
 $router->get('/', 'controllers/home.php');
 $router->get('/listings', 'controllers/listings/index.php');
