@@ -1,9 +1,14 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
-require '../helpers.php';
+
 
 use Framework\Router;
+use Framework\Session;
+
+Session::start();
+
+require '../helpers.php';
 
 $config = require base_path('config/db.php');
 
